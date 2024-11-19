@@ -1,4 +1,8 @@
-# React + TypeScript + Vite
+# Food Delivery Form
+
+App is a complex food delivery form allowing restaurant employees to take orders from customers. Project relates to [React Hook Form: The Complete Guide with React (2024)](https://www.udemy.com/course/react-hook-form-the-complete-guide-with-react-js) Udemy course by [Shamseer](https://www.udemy.com/user/shamseer-k-6) and is [React Hook Form](https://react-hook-form.com) practice.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -7,7 +11,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
@@ -49,6 +53,6 @@ export default tseslint.config({
 });
 ```
 
-## Running the Project
+### Running the Project
 
 Project uses NPM as package manager. Run `npm install` to install project dependencies and `npm run dev` to start development.
