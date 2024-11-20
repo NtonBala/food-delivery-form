@@ -3,7 +3,11 @@ import './App.css';
 function App() {
   return (
     <>
-      <div>Food Delivery Form</div>
+      <div className="container">
+        <div className="mx-5">
+          <div>Food Delivery Form</div>
+        </div>
+      </div>
     </>
   );
 }
