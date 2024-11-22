@@ -1,4 +1,4 @@
-import React, { ChangeEvent, SyntheticEvent, useState } from 'react';
+import { ChangeEvent, SyntheticEvent, useState } from 'react';
 
 type FoodDeliveryFormType = {
   customerName: string;
@@ -15,7 +15,7 @@ export const FoodDeliveryForm = () => {
     customerName: '',
     mobile: '',
   });
-  const [errors, setErrors] = useState<FoodDeliveryFormErrorType>({
+  const [, setErrors] = useState<FoodDeliveryFormErrorType>({
     customerName: '',
     mobile: '',
   });
