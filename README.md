@@ -56,3 +56,7 @@ export default tseslint.config({
 ### Running the Project
 
 Project uses NPM as package manager. Run `npm install` to install project dependencies and `npm run dev` to start development.
+
+### Deploy
+
+App is deployed to GitHub pages: https://ntonbala.github.io/food-delivery-form. Deployment is done automatically from `main` branch.
