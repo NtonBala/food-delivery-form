@@ -60,3 +60,8 @@ Project uses NPM as package manager. Run `npm install` to install project depend
 ### Deploy
 
 App is deployed to GitHub pages: https://ntonbala.github.io/food-delivery-form. Deployment is done automatically from `main` branch.
+
+## Cheat Sheet
+
+Cheat sheet contains all of the important hooks, methods and properties with serial numbers of course lectures next to them:
+![RHF course cheat sheet](./Cheat+sheet+for+the+Course.png)
