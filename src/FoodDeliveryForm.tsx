@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 type FoodDeliveryFormType = {
   customerName: string;
@@ -6,10 +6,14 @@ type FoodDeliveryFormType = {
 };
 
 export const FoodDeliveryForm = () => {
-  const { register } = useForm<FoodDeliveryFormType>();
+  const { register, handleSubmit } = useForm<FoodDeliveryFormType>();
+
+  const onSubmit: SubmitHandler<FoodDeliveryFormType> = (data) => {
+    console.log('form data:', data);
+  };
 
   return (
-    <form autoComplete="off">
+    <form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
       <div className="form-floating mb-3">
         <input type="text" className="form-control" placeholder="Customer Name" {...register('customerName', { value: 'Fiona' })} />
         <label>Customer Name</label>
