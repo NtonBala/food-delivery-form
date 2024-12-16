@@ -31,7 +31,7 @@ export const FoodDeliveryForm = () => {
       <div className="row mb-2">
         <div className="col">
           <div className="form-floating">
-            <input type="text" className="form-control" placeholder="#Order No." {...register('orderNumber')} />
+            <input disabled type="text" className="form-control" placeholder="#Order No." {...register('orderNumber')} />
             <label>#Order No.</label>
           </div>
         </div>
