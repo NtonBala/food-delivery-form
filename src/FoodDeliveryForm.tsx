@@ -2,8 +2,10 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { getRenderCount } from './utils/getRenderCount';
 
 type FoodDeliveryFormType = {
+  orderNumber: number;
   customerName: string;
   mobile: string;
+  email: string;
 };
 
 const RenderCount = getRenderCount();
@@ -19,14 +21,35 @@ export const FoodDeliveryForm = () => {
     <form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
       <RenderCount />
 
-      <div className="form-floating mb-3">
-        <input type="text" className="form-control" placeholder="Customer Name" {...register('customerName', { value: 'Fiona' })} />
-        <label>Customer Name</label>
+      <div className="row mb-2">
+        <div className="col">
+          <div className="form-floating">
+            <input type="text" className="form-control" placeholder="#Order No." {...register('orderNumber')} />
+            <label>#Order No.</label>
+          </div>
+        </div>
+
+        <div className="col">
+          <div className="form-floating">
+            <input type="text" className="form-control" placeholder="Mobile" {...register('mobile')} />
+            <label>Mobile</label>
+          </div>
+        </div>
       </div>
 
-      <div className="form-floating mb-3">
-        <input type="text" className="form-control" placeholder="Mobile" {...register('mobile')} />
-        <label>Mobile</label>
+      <div className="row mb-2">
+        <div className="col">
+          <div className="form-floating">
+            <input type="text" className="form-control" placeholder="Customer Name" {...register('customerName', { value: 'Fiona' })} />
+            <label>Customer Name</label>
+          </div>
+        </div>
+        <div className="col">
+          <div className="form-floating">
+            <input type="text" className="form-control" placeholder="Email" {...register('email')} />
+            <label>Email</label>
+          </div>
+        </div>
       </div>
 
       <button type="submit" className="btn btn-primary">
