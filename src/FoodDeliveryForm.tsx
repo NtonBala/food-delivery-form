@@ -11,7 +11,14 @@ type FoodDeliveryFormType = {
 const RenderCount = getRenderCount();
 
 export const FoodDeliveryForm = () => {
-  const { register, handleSubmit } = useForm<FoodDeliveryFormType>();
+  const { register, handleSubmit } = useForm<FoodDeliveryFormType>({
+    defaultValues: {
+      orderNumber: new Date().valueOf(),
+      customerName: '',
+      mobile: '',
+      email: '',
+    },
+  });
 
   const onSubmit: SubmitHandler<FoodDeliveryFormType> = (data) => {
     console.log('form data:', data);
@@ -40,7 +47,7 @@ export const FoodDeliveryForm = () => {
       <div className="row mb-2">
         <div className="col">
           <div className="form-floating">
-            <input type="text" className="form-control" placeholder="Customer Name" {...register('customerName', { value: 'Fiona' })} />
+            <input type="text" className="form-control" placeholder="Customer Name" {...register('customerName')} />
             <label>Customer Name</label>
           </div>
         </div>
