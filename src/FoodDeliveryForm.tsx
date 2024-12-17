@@ -1,4 +1,4 @@
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, FieldErrors } from 'react-hook-form';
 import { getRenderCount } from './utils/getRenderCount';
 
 type FoodDeliveryFormType = {
@@ -24,8 +24,12 @@ export const FoodDeliveryForm = () => {
     console.log('form data:', data);
   };
 
+  const onError = (err: FieldErrors<FoodDeliveryFormType>) => {
+    console.log('validation errors:', err);
+  };
+
   return (
-    <form autoComplete="off" noValidate onSubmit={handleSubmit(onSubmit)}>
+    <form autoComplete="off" noValidate onSubmit={handleSubmit(onSubmit, onError)}>
       <RenderCount />
 
       <div className="row mb-2">
